@@ -1,0 +1,35 @@
+# A simple example illustrating forms.
+# The integer parameter is not validated.
+# We use l:onsubmit, which expects a side-effecting handler
+# We use DOM library operations to replace part of the XML document
+
+fun handleForm(s,i) {
+  replaceNode(<div id="result">
+      <p>The string was: {stringToXml(s)}</p>
+      <p>The integer was: {intToXml(i)}</p>
+      </div>,
+      getNodeById("result"))
+}
+
+fun mainPage (_) {
+  page 
+    <html>
+    <body>
+      <h1>Example form, take 2</h1>
+      <form l:onsubmit="{handleForm(s,stringToInt(i))}">
+        A string: <input l:name="s" value="foo"/>
+        An integer: <input l:name="i" value="42"/>
+        <button type="submit">Submit!</button>
+      </form>
+      <div id="result" />
+      </body>
+    </html>
+}
+
+
+fun main () {
+  addRoute("",mainPage);
+  servePages()
+}
+
+main()

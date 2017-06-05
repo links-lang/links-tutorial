@@ -1,0 +1,34 @@
+# A simple example illustrating forms.
+# The integer parameter is not validated.
+
+fun handleForm(s,i) {
+  page 
+    <html>
+      <body>
+      <p>The string was: {stringToXml(s)}</p>
+      <p>The integer was: {intToXml(i)}</p>
+      </body>
+    </html>
+}
+
+fun mainPage (_) {
+  page 
+    <html>
+    <body>
+      <h1>Example form</h1>
+      <form l:action="{handleForm(s,stringToInt(i))}">
+        A string: <input l:name="s" value="foo"/>
+        An integer: <input l:name="i" value="42"/>
+        <button type="submit">Submit!</button>
+      </form>
+      </body>
+    </html>
+}
+
+
+fun main () {
+  addRoute("",mainPage);
+  servePages()
+}
+
+main()
