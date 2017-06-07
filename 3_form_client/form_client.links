@@ -11,7 +11,7 @@ fun handleForm(s,i) {
       getNodeById("result"))
 }
 
-fun mainPage (_) {
+fun mainPage () {
   page 
     <html>
     <body>
@@ -27,9 +27,4 @@ fun mainPage (_) {
 }
 
 
-fun main () {
-  addRoute("",mainPage);
-  servePages()
-}
-
-main()
+serveThis(mainPage)
