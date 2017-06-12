@@ -1,5 +1,5 @@
-fun mainPage () {
-  page 
+fun mainPage (_,_) {
+  page
     <html>
     <body>
     <h1>Hello world!</h1>
@@ -7,4 +7,10 @@ fun mainPage () {
     </html>
 }
 
-serveThis(mainPage)
+
+fun main () {
+  addRoute("",mainPage);
+  servePages()
+}
+
+main()

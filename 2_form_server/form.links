@@ -2,7 +2,7 @@
 # The integer parameter is not validated.
 
 fun handleForm(s,i) {
-  page 
+  page
     <html>
       <body>
       <p>The string was: {stringToXml(s)}</p>
@@ -11,8 +11,8 @@ fun handleForm(s,i) {
     </html>
 }
 
-fun mainPage () {
-  page 
+fun mainPage (_,_) {
+  page
     <html>
     <body>
       <h1>Example form</h1>
@@ -26,4 +26,9 @@ fun mainPage () {
 }
 
 
-serveThis(mainPage)
+fun main () {
+  addRoute("",mainPage);
+  servePages()
+}
+
+main()

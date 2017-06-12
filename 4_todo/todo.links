@@ -9,7 +9,7 @@ fun remove(item, items) {
 }
 
 
-fun todo(items) client {
+fun todo(items) {
    <html>
     <body>
      <form l:onsubmit="{replaceDocument(todo(item::items))}">
@@ -29,10 +29,9 @@ fun todo(items) client {
    </html>
 }
 
-var x = addRoute("",fun (_) {
+fun mainPage() {
   page
    <#>{todo(["add items to todo list"])}</#>
-});
-servePages()
-
+}
+serveThis(mainPage)
 
