@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "shell", privileged: false, path: "setup.sh"
   
-  config.vm.network "private_network", ip: 192.168.30.10
+  config.vm.network "private_network", ip: "192.168.30.10"
   
   config.vm.provider "virtualbox" do |vb|
      vb.memory = "2000"
