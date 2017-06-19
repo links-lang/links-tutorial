@@ -26,7 +26,7 @@ fun response(s) client {
      for ((i=i,f=f) <- lookupFactorials(n))
       <tr>
        <td>{intToXml(i)}</td>
-       <td>{intToXml(f)}</td>
+       <td>{stringToXml(f)}</td>
       </tr>
     }</tbody></table>
    </body>
@@ -36,7 +36,7 @@ fun response(s) client {
 
 fun lookupFactorials(n) server {
  var db = database "links";
- var factorials = table "factorials" with (i : Int, f : Int) from db;
+ var factorials = table "factorials" with (i : Int, f : String) from db;
 
  query {
    for (row <-- factorials)

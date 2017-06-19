@@ -29,9 +29,14 @@ fun todo(items) {
    </html>
 }
 
-fun mainPage() {
+fun mainPage(_) {
   page
    <#>{todo(["add items to todo list"])}</#>
 }
-serveThis(mainPage)
 
+fun main () {
+ addRoute("",mainPage);
+ servePages()
+}
+
+main()

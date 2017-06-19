@@ -1,3 +1,3 @@
 CREATE TABLE todo (
-  name TEXT;
+  name TEXT
 );

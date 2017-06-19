@@ -32,3 +32,6 @@ The second command should not return; it starts a Web server running on port 808
 
 
 
+# Setting up Links for use with a database
+
+Please follow the instructions [here](https://github.com/links-lang/links/wiki/Database-setup) regarding how to set up Links for use with a (Postgres) database.

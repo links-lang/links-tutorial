@@ -11,7 +11,7 @@ fun handleForm(s,i) {
       getNodeById("result"))
 }
 
-fun mainPage (_,_) {
+fun mainPage (_) {
   page
     <html>
     <body>
