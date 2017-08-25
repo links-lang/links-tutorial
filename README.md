@@ -1,3 +1,11 @@
+# Overview
+
+This repository contains a set of small tutorial examples aimed at helping people learn the basics of Links programming.
+
+The rest of this README explains how to create virtual machine containing Links, and how to set it up to use a (Postgres) database.
+
+Detailed instructions for each program are found on the [wiki](https://github.com/links-lang/links-tutorial/wiki)
+
 # Installing Links on a fresh VM using VirtualBox / Vagrant
 
 The following instructions explain how to install Links in a freshly installed Ubuntu 16.04 machine.  You can use [VirtualBox](https://www.virtualbox.org/) manually or use [Vagrant](http://www.vagrantup.com/) to automate most of the steps.  If you use Vagrant, you can use the `Vagrantfile` and `setup.sh` files in this repository: placing them in a new directory and typing "vagrant up" should perform the first three steps automatically.  If this doesn't work, though, following the steps manually may help you to understand why.
