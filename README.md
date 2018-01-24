@@ -4,7 +4,7 @@ This repository contains a set of small tutorial examples aimed at helping peopl
 
 The rest of this README explains how to create virtual machine containing Links, and how to set it up to use a (Postgres) database.
 
-Detailed instructions for each program are found on the [wiki](https://github.com/links-lang/links-tutorial/wiki)
+Detailed instructions for each program are found on the [wiki](https://github.com/links-lang/links-tutorial/wiki).
 
 # Installing Links on a fresh VM using VirtualBox / Vagrant
 
@@ -21,7 +21,7 @@ The following instructions explain how to install Links in a freshly installed U
     $ opam init -a
     $ opam switch 4.04.0
     $ eval `opam config env`
-    $ opam install -y postgresql links
+    $ opam install -y postgresql links links-postgresql
     ```
 Again, if using Vagrant then one can automate this by placing the commands in a script "setup.sh" and configuring the Vagrantfile.  (This will take several minutes.)
 
