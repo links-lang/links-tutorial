@@ -1,0 +1,5 @@
+jsliburl=/lib/
+jslibdir=/home/vagrant/.opam/4.10.0/lib/links/js
+database_driver=sqlite3
+
+
