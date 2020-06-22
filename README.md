@@ -18,12 +18,12 @@ The following instructions explain how to install Links in a freshly installed U
 3.  Within the VM, execute the following commands: 
     ```
     $ sudo add-apt-repository ppa:avsm/ppa -y
-	$ sudo apt update
-    $ sudo apt install -y m4 postgresql libpq-dev opam
+    $ sudo apt update
+    $ sudo apt install -y m4 sqlite3 libsqlite3-dev opam
     $ opam init -a
-    $ opam switch 4.10.0
+    $ opam switch create 4.10.0
     $ eval $(opam env)
-    $ opam install -y postgresql links links-postgresql
+    $ opam install -y sqlite3 links links-sqlite3
     ```
 Again, if using Vagrant then one can automate this by placing the commands in a script "setup.sh" and configuring the Vagrantfile.  (This will take several minutes.)
 
@@ -44,6 +44,6 @@ The second command should not return; it starts a Web server running on port 808
 
 # Setting up Links for use with an external database
 
-The tutorial examples work using sqlite3, an easy-to-use library providing database capabilities, but they can also be run on a database server such as PostgreSQL or MySQL.  This requires setting up appropriate accounts and permissions on the server and configuring Links to access it.
+The tutorial examples work using sqlite3, an easy-to-use library providing database capabilities, but they can also be run on a database server such as PostgreSQL or MySQL.  This requires setting up appropriate accounts and permissions on the server, installing the appropriate OPAM package (e.g. `links-postgresql`), and configuring Links to access the database.
 
 Please follow the instructions [here](https://github.com/links-lang/links/wiki/Database-setup) regarding how to set up Links for use with a (Postgres) database.  Currently MySQL is unsupported but we plan to restore support for it soon.

@@ -4,11 +4,11 @@
 
 To use SQLite3, first run the following command:
 ```
-sqlite3 links -init factorials.sql
+sqlite3 links < factorial.sql
 ```
-This will create a database file called `links`.  It will also result in a `SQLite3` prompt.  If you want, you can enter a query such as `select * from factorials;` to check that data has actually been loaded.  Type `control-c` or `.quit` to exit.
+This will create a database file called `links`.  It will also result in a `SQLite3` prompt.  
 
-Next, copy the config file `config.sqlite3` to `config` and run Links using the command `linx --config=config factorials.links`.  This should result in a running Web program that performs queries against the SQLite3 database `links`.
+Next, copy the config file `config.sqlite3` to `config` and run Links using the command `linx --config=config factorial.links`.  This should result in a running Web program that performs queries against the SQLite3 database `links`.
 
 
 ## PostgreSQL
