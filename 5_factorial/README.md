@@ -20,4 +20,4 @@ Once configuration is done, run the `factorials.sql` file using `psql -f factori
 
 ## MySQL, MariaDB
 
-MySQL and MariaDB should be supported through the OPAM `mysql` library.  Links support for `mysql` will be reinstated soon.
+MySQL and MariaDB should be supported through the OPAM `mysql` library.  Links supports `MySQL` but this tutorial has not been tested with a `MySQL` configuration.
